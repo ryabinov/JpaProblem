@@ -43,5 +43,11 @@ public class AuthorController {
             authorService.deleteAuthorById(id);
             return ResponseEntity.ok().build();
         }
+
+    @ResponseBody
+    @GetMapping("/getAllFields")
+    public ResponseEntity<Iterable<Author>> getAllFields() {
+        return ResponseEntity.ok().body(authorService.getAllFields());
+    }
     }
 
