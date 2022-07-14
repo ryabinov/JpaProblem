@@ -46,7 +46,7 @@ public class AuthorController {
 
     @ResponseBody
     @GetMapping("/getAllFields")
-    public ResponseEntity<Iterable<Author>> getAllFields() {
+    public ResponseEntity<Iterable<Author>> getAllFields(Long id, String name) {
         return ResponseEntity.ok().body(authorService.getAllFields());
     }
     }
